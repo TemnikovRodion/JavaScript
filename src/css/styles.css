@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Стилизация body*/
+body {
+  max-width: 1000px;
+  width: 1000px;
+  min-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 170px 100px;
+  background-color: #f0f0f0;
+}
+
+/*Стилизация анкеты*/
+.about {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 138px 1fr;
+  padding: 20px 20px 32px 20px;
+  border-bottom: 2px solid #f0f0f0;
+  position: relative;
+  background-color: #fffefc;
+}
+
+.about_info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.input {
+  padding: 10px 0px;
+  border: none;
+  border-bottom: 2px solid #333333;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Roboto";
+}
+
+.input:focus {
+  outline: none;
+}
+
+.about_image {
+  margin-top: 10px;
+}
+
+.about_seal {
+  position: absolute;
+  right: 4px;
+  bottom: 11px;
+}
+
+
+
+/*Стилизация чекбоксов*/
+
+.skills {
+  display: grid;
+  background-color: #fffefc;
+  padding: 36px 20px 38px 20px;
+  border-bottom: 2px solid #f0f0f0;
+  row-gap: 26px;
+}
+
+#skillslist {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  font-family: "Roboto";
+  color: rgb(102, 102, 102);
+}
+
+#skillslist > li {
+  display: flex;
+  align-items: center;
+} 
+
+.checkbox_label {
+  display: flex;
+  position: relative;
+  user-select: none;
+  padding-left: 26px;
+  height: 19px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.checkmark {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    height: 19px;
+    width: 18px;
+    border-radius: 5px;
+    background-color: rgb(238, 238, 238);
+}
+
+.checkbox_label:hover input ~ .checkmark {
+  background-color: rgb(39, 122, 155);
+}
+
+.checkbox_label input:checked ~ .checkmark {
+  background-color: rgb(0, 147, 215);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox_label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox_label .checkmark:after {
+  left: calc(50% - 3px);
+  top: calc(50% - 7px);
+  width: 6px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  box-sizing: border-box;
+}
+
+/*Стилизация блока результата с диаграммой*/
+.result {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #fcfbf9;
+  height: 250px;
+}
+
+.diagram {
+  padding: 58px 0px 59px 20px;
+}
+
+.semicircle {
+  position: relative;
+  height: 127px;
+  width: fit-content; /* TODO: try to avoid it */
+}
+
+.arrow {
+  padding-left: calc(50% - 55px);
+  font-size: 0;
+  margin-top: -15px;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+  padding: 71px 121px 80px 6px;
+  font-family: "Roboto";
+  font-size: 18px;
+}
+
+h1 {
+  color: rgb(1, 1, 1);
+  margin: 0px;
+  font-size: 18px;
+}
+
+.counter {
+  font-size: 50px;
+  font-family: "Roboto";
+  color: rgb(0, 147, 215);
+  line-height: 0.44;
+}
+
+@media (max-width:1000px) {
+  body {
+    padding: 30px 85px 50px;
+    width: 100%;
+    min-width: unset;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .diagram {
+    display: flex;
+    justify-content: center;
+    padding: 29px 0px;
+  }
+
+  .total {
+    padding: 35px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media (max-width:576px) {
+  body {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .about_image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  #skillslist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .diagram {
+    display: flex;
+    justify-content: center;
+    padding: 29px 0px;
+  }
+
+  .total {
+    padding: 35px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

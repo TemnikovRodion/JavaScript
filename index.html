@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9lines</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body>
+    <section class="about">
+        <div class="about_image">
+            <img src="src/img/Avatar.png" alt="" />
+        </div>
+        <form class="about_info">
+            <input class="input" placeholder="Имя" />
+            <input class="input" placeholder="Дата Рождения" />
+            <input class="input" placeholder="Город" />
+            <input class="input" placeholder="Контактные данные" />
+        </form>
+        <div class="about_seal">
+            <img src="src/svg/Shape 6.svg" alt="" />
+        </div>
+    </section>
+
+    <section class="skills">
+        <h1>Навыки</h1>
+        <ul id="skillslist">
+            <li>
+                <label class="checkbox_label">HTML5
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">SASS
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <input type="checkbox" hidden />
+                <label class="checkbox_label">VANILLAJS
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">GIT
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">CSS3
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">LESS
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">ANGULAR
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">FOUNDATION
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">БЭМ
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">GULP
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">JQUERY
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="checkbox_label">BOOTSTRAP
+                    <input type="checkbox" class="skill_checkbox" onclick="onCheckboxClick(event)" hidden />
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+    </section>
+    <section class="result">
+        <div class="diagram">
+            <div class="semicircle">
+                <img src="src/svg/Meter.svg" alt="" />
+                <div id="arrow" class="arrow">
+                    <img src="src/svg/Arrow.svg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <h1>Мой уровень владения Java Script</h1>
+            <div id="counter" class="counter">
+                0
+            </div>
+        </div>
+    </section>
+
+    <script src="src/js/scripts.js"></script>
+</body>
+
+</html>
